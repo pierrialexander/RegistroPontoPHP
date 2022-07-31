@@ -1,0 +1,27 @@
+// TABELA DE PONTO
+
+CREATE TABLE `ponto` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`data_entrada` DATE NOT NULL,
+	`entrada` TIME NULL DEFAULT NULL,
+	`saida_entrada` TIME NULL DEFAULT NULL,
+	`retorno_intervalo` TIME NULL DEFAULT NULL,
+	`saida` TIME NULL DEFAULT NULL,
+	`usuario_id` INT(11) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+;
+
+// TABELA DE USUARIOS
+
+CREATE TABLE `usuarios` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`nome` VARCHAR(240) NOT NULL DEFAULT '0' COLLATE 'utf8mb4_general_ci',
+	`email` VARCHAR(240) NOT NULL DEFAULT '0' COLLATE 'utf8mb4_general_ci',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+;
